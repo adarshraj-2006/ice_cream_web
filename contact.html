@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — KulfiWala</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #b92d2d;
+      --secondary: #ffe0b2;
+      --accent: #b92d2d;
+      --text-dark: #b92d2d;
+      --text-light: #6d4c41;
+      --bg: #fff8ef;
+      --bg-green: #e8f5e9;
+      --white: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      --font-heading: 'Playfair Display', serif;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text-dark);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-green);
+      padding: 20px 60px;
+      border-bottom: 2px solid #dcedc8;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    header nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+      color: var(--accent);
+    }
+
+    /* Contact section */
+    .contact-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      background: var(--secondary);
+      padding: 60px 10%;
+      gap: 40px;
+    }
+
+    .contact-text h2 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+    }
+
+    .contact-text p {
+      font-size: 1rem;
+      color: var(--text-light);
+      max-width: 500px;
+      line-height: 1.6;
+    }
+
+    .contact-details {
+      margin-top: 25px;
+    }
+
+    .contact-details div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      font-size: 1rem;
+      color: var(--text-dark);
+    }
+
+    .contact-details span {
+      font-size: 1.5rem;
+      margin-right: 12px;
+      color: var(--accent);
+    }
+
+    .contact-form {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      background: #fff3e0;
+      font-size: 1rem;
+      color: var(--text-dark);
+    }
+
+    .contact-form textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    .contact-form button {
+      background: var(--accent);
+      border: none;
+      color: #fff;
+      padding: 12px 30px;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #ff5722;
+    }
+
+    .contact-image img {
+      width: 100%;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    /* Partner section */
+    .partner-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 80px 10%;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .partner-section h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      color: var(--text-dark);
+    }
+
+    .partner-section p {
+      color: var(--text-light);
+      line-height: 1.6;
+      max-width: 500px;
+    }
+
+    .partner-form {
+      background: var(--secondary);
+      padding: 30px;
+      border-radius: 15px;
+    }
+
+    .partner-form input,
+    .partner-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      background: #fffaf3;
+      font-size: 1rem;
+    }
+
+    .partner-form button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .partner-form button:hover {
+      background: #f4511e;
+    }
+
+    /* Extra info section */
+    .info-section {
+      background: var(--bg-green);
+      padding: 70px 10%;
+      text-align: center;
+    }
+
+    .info-section h2 {
+      font-family: var(--font-heading);
+      color: var(--accent);
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .info-section p {
+      color: var(--text-light);
+      font-size: 1rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .info-card {
+      background: var(--white);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    }
+
+    .info-card h3 {
+      color: var(--accent);
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .info-card p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      background: #fff3e0;
+      text-align: center;
+      padding: 25px;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .contact-section, .partner-section {
+        grid-template-columns: 1fr;
+      }
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      header nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.jpg" alt="KulfiWala Logo">
+    
+  </header>
+
+  <section class="contact-section">
+    <div class="contact-text">
+      <h2>Talk to Us — We’re All Ears (and Taste Buds!)</h2>
+      <p>We love hearing from you! Whether you want to share feedback, have a sweet suggestion, or just say hello — we’re here for every scoop of conversation.</p>
+
+      <div class="contact-details">
+        <div><span>📞</span> +91 98765 43210</div>
+        <div><span>✉</span> hello@kulfiwala.in</div>
+        <div><span>📍</span> Head Office: Jaipur, Rajasthan, India</div>
+      </div>
+    </div>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section class="partner-section">
+    <div>
+      <h2>Partner with KulfiWala</h2>
+      <p>We’re spreading sweetness across India — one kulfi at a time!  
+      Join our journey and bring traditional flavors to your city.  
+      Let’s partner to share the taste of heritage and happiness.</p>
+    </div>
+    <form class="partner-form">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea placeholder="Tell us about your interest"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section class="info-section">
+    <h2>More Ways to Connect</h2>
+    <p>We believe in spreading joy — and communication is key! You can reach us anytime through the following options.</p>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>Customer Support</h3>
+        <p>Have questions about our menu or stores? Our friendly support team is always happy to assist you!</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Franchise Enquiries</h3>
+        <p>Interested in bringing KulfiWala to your town? Let’s create something sweet together!</p>
+      </div>
+
+      <div class="info-card">
+        <h3>Social Media</h3>
+        <p>Follow us on Instagram, Facebook, and Twitter for updates, offers, and behind-the-scenes moments.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 KulfiWala Ice Creams — Handcrafted with Love and Tradition 🍦
+  </footer>
+
+</body>
+</html>
