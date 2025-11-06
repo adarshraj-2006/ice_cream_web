@@ -214,6 +214,8 @@ body {
 }
 
 .category-card {
+  height:200px;
+  width:100%;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
@@ -963,4 +965,5 @@ body {
   opacity: 0.8;
   text-align: center;
 }
+
 
