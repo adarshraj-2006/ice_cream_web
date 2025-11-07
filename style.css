@@ -975,6 +975,56 @@ body {
   opacity: 0.8;
   text-align: center;
 }
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Open+Sans&display=swap');
+
+.magic-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 40px;
+  background-color: #fffdf9;
+}
+
+.magic-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.magic-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.magic-text {
+  max-width: 500px;
+}
+
+.magic-text h2 {
+  font-family: 'Baloo 2', cursive;
+  color: #4b2a1e;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.magic-text h2 span {
+  display: block;
+}
+
+.magic-text p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+
 
 
 
